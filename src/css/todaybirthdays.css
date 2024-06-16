@@ -1,0 +1,50 @@
+
+.today-birthdays {
+    font-family: Arial, sans-serif;
+  }
+  
+  .today-birthdays h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .today-birthdays ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .today-birthdays li {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 15px;
+    position: relative; /* Ensure relative positioning for pseudo-elements */
+    transition: background-color 0.3s ease;
+  }
+  
+  .today-birthdays li:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+  }
+  
+  .today-birthdays li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .today-birthdays li:hover::after {
+    opacity: 1;
+  }
+  
+  .today-birthdays li .birthday-cake {
+    margin-left: 10px;
+  }
+  

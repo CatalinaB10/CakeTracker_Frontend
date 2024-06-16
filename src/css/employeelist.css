@@ -1,0 +1,93 @@
+.employee-list {
+    font-family: Arial, sans-serif;
+  }
+  
+  .employee-list h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .employee-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .employee-list li {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .employee-list li span {
+    font-weight: bold;
+  }
+  
+  .employee-list li button {
+    margin-left: 10px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .employee-list li button:hover {
+    background-color: #0056b3;
+  }
+  
+  .employee-list li .actions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .employee-list .add-button {
+    margin:  10px 0;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .employee-list .add-button:hover {
+    background-color: #218838;
+  }
+  
+  /* employeelist.css */
+.employee-list {
+  padding: 20px;
+}
+
+.add-button {
+  margin-bottom: 20px;
+}
+
+.actions {
+  margin-top: 10px;
+}
+
+/* Override Bootstrap Modal styles if necessary */
+.modal-dialog-centered {
+  display: flex;
+  align-items: center;
+  min-height: calc(100% - 1rem);
+}
+
+.modal-content {
+  max-height: calc(100vh - 3.5rem);
+  overflow-y: auto;
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
