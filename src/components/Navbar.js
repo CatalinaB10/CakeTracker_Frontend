@@ -10,7 +10,7 @@ const Navbar = () => {
           <Link to="/today-birthdays" className="nav-link">Today's Birthdays</Link>
         </li>
         <li>
-          <Link to="/employees" className="nav-link">All Employees</Link>
+          <Link to="/" className="nav-link" >All Employees</Link>
         </li>
       </ul>
     </nav>

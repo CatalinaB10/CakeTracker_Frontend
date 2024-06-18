@@ -17,7 +17,7 @@ function App() {
         <div className='container'>
           <Routes>
             <Route path='/today-birthdays' element={<TodayBirthdays />} />
-            <Route path='/employees' element={<AllEmployees />} />
+            <Route exact path='/' element={<AllEmployees />} />
           </Routes>
         </div>
       </Router>

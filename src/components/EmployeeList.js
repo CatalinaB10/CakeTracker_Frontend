@@ -57,10 +57,10 @@ const EmployeeList = () => {
     <div className="employee-list">
       <h2>All Employees</h2>
       <Button className="add-button" onClick={() => setIsAddModalOpen(true)}>➕ Add Employee</Button>
-      <ul>
+      <ul className='card-list'>
         {employees.map(employee => (
-          <li key={employee.employeeId}>
-            <span>{employee.firstName} {employee.lastName}</span> {employee.birthDate}
+          <li className='card' key={employee.employeeId}>
+            <span>{employee.firstName} {employee.lastName}</span>{employee.birthDate}
             <div className="actions">
             <button onClick={() => handleUpdateClick(employee.employeeId)}>✏️ Update</button>
               <button onClick={() => handleDelete(employee.employeeId)}>🗑️ Delete</button>
