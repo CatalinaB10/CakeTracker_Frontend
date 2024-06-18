@@ -20,6 +20,22 @@ const TodayBirthdays = () => {
       });
   }, []);
 
+  const calculateAge = (birthdate) => {
+    const birthDate = new Date(birthdate);
+    const today = new Date();
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDifference = today.getMonth() - birthDate.getMonth();
+    
+    if (
+      monthDifference < 0 ||
+      (monthDifference === 0 && today.getDate() < birthDate.getDate())
+    ) {
+      age--;
+    }
+    return age;
+  };
+
+
   return (
     <div className="today-birthdays">
          <Confetti
@@ -33,7 +49,7 @@ const TodayBirthdays = () => {
       <ul>
         {birthdays.map(employee => (
           <li key={employee.id}>
-            <span>{employee.firstName} {employee.lastName}</span>  {employee.birthDate}
+            <span>{employee.firstName} {employee.lastName}</span> turns {calculateAge(employee.birthDate)} today!
             <span className="birthday-cake">🎂</span>
           </li>
         ))}

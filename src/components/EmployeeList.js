@@ -61,6 +61,9 @@ const EmployeeList = () => {
         {employees.map(employee => (
           <li className='card' key={employee.employeeId}>
             <span>{employee.firstName} {employee.lastName}</span>{employee.birthDate}
+            <div className="details">
+              <p>{employee.city}, {employee.country}</p>
+              </div>
             <div className="actions">
             <button onClick={() => handleUpdateClick(employee.employeeId)}>✏️ Update</button>
               <button onClick={() => handleDelete(employee.employeeId)}>🗑️ Delete</button>
